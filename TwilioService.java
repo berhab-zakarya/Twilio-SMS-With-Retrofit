@@ -1,13 +1,3 @@
-The Problem : No static field INSTANCE of type Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier
-The Soulution : 
-First
-	implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-	implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-	implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-	implementation 'com.github.hihi-dev:twiliosms:0.1.1'
-Second
-package com.omar.facerecognitionapps.utils;
-
 import android.util.Log;
 import com.hihi.twiliosms.TwilioMessage;
 import com.omar.facerecognitionapps.helpers.TwilioApi;
