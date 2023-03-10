@@ -1,38 +1,28 @@
-Twilio and Retrofit Example
-This project demonstrates how to use Twilio API with Retrofit to send SMS messages.
+# Adding Twilio SMS functionality with Retrofit in Android
 
-Getting Started
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/<your-username>/twilio-retrofit-example.git
-Open the project in Android Studio.
+## Problem
 
-Update your Twilio credentials:
+If you are using Twilio SMS functionality in your Android app and encounter an error message that says "No static field INSTANCE of type Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier," then you have come to the right place. 
 
-Open the TwilioService.java file located in app/src/main/java/com/omar/facerecognitionapps/utils/.
-Replace ACCOUNT_SID and AUTH_TOKEN with your Twilio Account SID and Auth Token respectively.
-Build and run the app.
+## Solution
 
-Dependencies
-This project uses the following dependencies:
+To fix this error, you can follow these steps:
 
-OkHttp 4.9.1
-Retrofit 2.9.0
-Retrofit Gson Converter 2.9.0
-Hihi-Dev TwilioSMS 0.1.1
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. Add the following dependencies to your app's build.gradle file:
+    ```
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.hihi-dev:twiliosms:0.1.1'
+    ```
 
-Acknowledgments
-This project is based on the Twilio SMS API Quickstart and the Retrofit documentation.
-Thanks to Hihi-Dev for providing the TwilioSMS library.
-Contributing
-Contributions are welcome! If you find a bug or have an idea for a feature, please open an issue or submit a pull request.
+2. Create a `TwilioService` class and add the code
 
-Authors
-Your Name - Initial work
-See also the list of contributors who participated in this project.
 
-Contact
-If you have any questions or comments, please feel free to contact me through GitHub or my website.
+Replace `"your_twilio_account_sid"`, `"your_twilio_auth_token"`, and `"your_twilio_phone_number"` with your actual Twilio account
+
+###Prerequisites
+Before you begin, you will need:
+
+A Twilio account. You can sign up for a free account [here](https://www.twilio.com/try-twilio)
+.
